@@ -80,7 +80,7 @@ class Smooth(object):
 
     def _sample_noise(self, x, num, batch_size):
     # Imposta il dispositivo (GPU se disponibile, altrimenti CPU)
-    self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     
         with torch.no_grad():
             counts = np.zeros(self.num_classes, dtype=int)
